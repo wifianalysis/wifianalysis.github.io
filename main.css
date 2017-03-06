@@ -1,0 +1,266 @@
+@import url(//fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i|PT+Sans|PT+Sans:b|Cutive+Mono|Source+Code+Pro);
+@import url(//fonts.googleapis.com/css?family=Patrick+Hand+SC);
+@import url(//fonts.googleapis.com/css?family=Walter+Turncoat);
+@import url(//fonts.googleapis.com/css?family=Cabin+Sketch);
+@import url(//fonts.googleapis.com/css?family=Short+Stack);
+
+html, body, #chart/*, svg*/ {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background-color:#f8fbee;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 50%;
+  height: 50%
+
+}
+
+
+#narrative {
+  top: 50%;
+  width: 100%;
+  height: 50%;
+  right: 0;
+  left:0;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  overflow: auto;
+  margin-left: -200px;
+
+}
+
+#calender {
+  top: 0%;
+  left: 50%;
+  position: fixed;
+  height: 80px;
+  zIndex: 1000;
+}
+
+
+#focusChart {
+  top: 80px;
+  left: 50%;
+  position: fixed;
+  opacity: 0.8;
+  width: 100%;
+  height: 50%;
+  overflow: auto;
+}
+
+#focusChart ul{
+  list-style: none;
+  padding: 0;
+}
+
+#legend {
+  font-size: 1.8em;
+  bottom: 58%;
+  left: 05%;
+  position: fixed;
+  width: 80px;
+  height: 100px;
+  zIndex: 1000;
+}
+
+#legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.5;
+}
+#focusChart svg {
+/*    background: white;*/
+}
+
+/*.leaflet-interactive {*/
+/*  stroke:#1abc9c;*/
+/*}*/
+
+#focusChart path.fc.area {
+    fill: #1abc9c;
+    opacity: 0.5;
+}
+#focusChart .fc.area1 {
+    fill: #00bc9c;
+    stroke: #00bc9c;
+    opacity: 0.5;
+
+}
+#focusChart .fc.area2 {
+    fill: #1a009c;
+    opacity: 0.5;
+}
+#focusChart .fc.area3 {
+    fill: #1abc00;
+    opacity: 0.5;
+}
+
+#focusChart .axis path, .axis line {
+    fill: none;
+    stroke:black;
+    shape-rendering: crispEdges;
+}
+
+#focusChart .brush .extent {
+    fill-opacity: .1;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+#narrative  rect {
+		fill: grey;
+		stroke: #000;
+	}
+
+#narrative	path {
+		fill: none;
+		stroke-width: 2;
+		stroke: #333;
+	}
+
+#narrative	path.light {
+		stroke: #3c6da8;
+		opacity: 0.3;
+	}
+
+#narrative	path.dark {
+		stroke: #df2929;
+		opacity: 0.3;
+	}
+
+#narrative	path.highlight {
+		stroke: #e34a33;
+		opacity: 1;
+}
+
+#narrative	.scene {
+	fill: #3c6da8;
+	opacity: 0.3;
+}
+
+#narrative	.scene text {
+	opacity: 0.0;
+	font-size: 0.2em;
+}
+
+#narrative	.scene-highlight text {
+	opacity: 1.0;
+	font-size: 0.4em;
+}
+
+#narrative	.scene.dark {
+	fill: #df2929;
+	opacity: 0.3;
+}
+
+#narrative	scene-highlight {
+		fill: #df2929;
+		opacity: 1.0;
+}
+
+
+#narrative	.intro text:first-child {
+		fill: #fff;
+    stroke: #f9f9f9;
+    stroke-width: 3;
+	}
+
+#narrative	.intro text+text {
+	    fill: #333;
+	}
+
+#narrative	.intro text+text.dark {
+	    fill: #df2929;
+	}
+
+#narrative	.intro text+text.light {
+	    fill: #3c6da8;
+	}
+
+
+/* MODAL */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*CALENDER VIEW*/
+
+
+
+body {
+  font: 10px sans-serif;
+  shape-rendering: crispEdges;
+}
+
+.day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.RdYlGn .q10-11{fill:rgb(165,0,38)}
+.RdYlGn .q9-11{fill:rgb(215,48,39)}
+.RdYlGn .q8-11{fill:rgb(244,109,67)}
+.RdYlGn .q7-11{fill:rgb(253,174,97)}
+.RdYlGn .q6-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q4-11{fill:rgb(217,239,139)}
+.RdYlGn .q3-11{fill:rgb(166,217,106)}
+.RdYlGn .q2-11{fill:rgb(102,189,99)}
+.RdYlGn .q1-11{fill:rgb(26,152,80)}
+.RdYlGn .q0-11{fill:rgb(0,104,55)}
